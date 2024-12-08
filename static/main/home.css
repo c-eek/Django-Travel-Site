@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #00A699; /* Airbnb Green */
+}
+
+header {
+  background-color: #484848; /* Dark Gray for the Navigation bar */
+  color: #FF5A5F; /* Red for the Text */
+  padding: 1rem 0;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+  background-color: #fff !important; /* Airbnb Green */
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 3rem 0;
+  color: #484848; /* Dark Gray for Text */
+  margin-bottom: 2rem;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-section p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.locations-section {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.locations-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #343a40; /* Orange */
+}
+
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.location {
+  background-color: #fff; /* White Card background */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.location .button {
+  background-color: #343a40; /* Dark Gray Button background */
+  color: #fff; /* Red Button text */
+}
+
+.location a.button:hover {
+  text-decoration: none;
+}
+
+.location img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.location h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+  color: #343a40; /* Orange for Text */
+}
+
+.location p {
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  color: #767676; /* Light Gray for Text */
+}
+
+.location:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(72, 72, 72, 0.9); /* Dark Gray Shadow */
+}
+
+footer {
+  background-color: #484848; /* Dark Gray Footer background */
+  color: #FF5A5F; /* Red Footer text */
+  text-align: center;
+  padding: 1rem 0;
+}

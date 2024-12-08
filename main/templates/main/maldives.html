@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .small-images {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .small-images img {
+            width: calc(25% - 7.5px);
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .villa-details, .rating-box, .booking-box, .host-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .guest-favorite {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+        }
+        
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .price {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .original {
+            text-decoration: line-through;
+            color: #888;
+        }
+        
+        .discounted {
+            font-weight: bold;
+        }
+        
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+        
+        .book-now {
+            background-color: #ff385c;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        
+        .host-info {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Maldives</h1>
+        
+        <div class="image-gallery">
+            <img src="{% static 'images/m1.jpg' %}" alt="Main Villa View" class="main-image">
+            <div class="small-images">
+                <img src="{% static 'images/m2.jpg' %}" alt="Pool View">
+                <img src="{% static 'images/m3.jpg' %}" alt="Dining Area">
+                <img src="{% static 'images/m4.jpg' %}" alt="Villa Exterior">
+                <img src="{% static 'images/m5.jpg' %}" alt="Kitchen">
+            </div>
+        </div>
+        
+        <div class="villa-details">
+            <h2>Maldives</h2>
+            <p>6 guests · 3 bedrooms · 3 beds · 3 bathrooms</p>
+        </div>
+        
+        <div class="rating-box">
+            <div class="guest-favorite">
+                <span class="icon">🏆</span>
+                <span>Guest favourite</span>
+            </div>
+            <p>One of the most loved homes on Airbnb, according to guests</p>
+            <div class="rating">
+                <span class="stars">5 stars ★★★★★</span>
+                <span class="review-count">300+ Reviews</span>
+            </div>
+        </div>
+        
+        <div class="booking-box">
+            <div class="price">
+                <span class="original">₹10000</span>
+                <span class="discounted">₹6500</span> night
+            </div>
+            <div class="booking-form">
+                <a href="{% url 'book' %}"><button class="book-now">Book</button></a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+

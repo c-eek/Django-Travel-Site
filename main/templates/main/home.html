@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+<div class="welcome-section">
+  <h1>Welcome to Your Dream Travel Destinations</h1>
+  <p>Explore the world's most beautiful places and book your dream tour with us!</p>
+</div>
+
+<div class="locations-section">
+  <h2>Popular Travel Locations</h2>
+  <div class="locations">
+    <div class="location">
+      <img src="{% static 'images/paris.jpg' %}" alt="Paris">
+      <h3>Paris, France</h3>
+      <p>Experience the romantic city of lights. Explore Paris</p>
+      <a href="{% url 'paris' %}" class="button">Book Now</a>
+    </div>
+    <div class="location">
+      <img src="{% static 'images/maldives.jpg' %}" alt="Maldives">
+      <h3>Maldives</h3>
+      <p>Relax in the tropical paradise of the Maldives.</p>
+      <a href="{% url 'maldives' %}" class="button">Book Now</a>
+    </div>
+    <div class="location">
+      <img src="{% static 'images/bali.jpg' %}" alt="Bali">
+      <h3>Bali, Indonesia</h3>
+      <p>Discover the beautiful beaches and culture of Bali.</p>
+      <a href="{% url 'bali' %}" class="button">Book Now</a>
+    </div>
+    <div class="location">
+      <img src="{% static 'images/nyc.jpg' %}" alt="New York City">
+      <h3>New York City, USA</h3>
+      <p>Visit the vibrant and bustling NYC. Explore New York</p>
+      <a href="{% url 'nyc' %}" class="button">Book Now</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

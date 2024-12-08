@@ -1,0 +1,110 @@
+
+/*     General Styles     */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #484848; /* Dark Gray */
+}
+
+body {
+    background: url('{% static "images/background.jpg" %}') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*     Header Styles      */
+
+header {
+    background-color: #343a40 !important; /* Slightly transparent dark background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out logo and nav */
+    position: relative;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .icon {
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #FF5A5F; /* Red */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #FF5A5F; /* Red */
+    font-weight: 700;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF5A5F; /* Red */
+}
+
+/* //
+/*     Footer Styles      */
+
+footer {
+    background-color: #343a40 !important; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #767676; /* Light Gray */
+}
+
+/* //
+/*     Button Styles      */
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FF5A5F; /* Red */
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #E55B50; /* Slightly darker Red */
+    transform: translateY(-2px);
+}
